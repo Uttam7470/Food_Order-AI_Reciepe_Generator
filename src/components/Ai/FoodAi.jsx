@@ -8,7 +8,7 @@ import ai from "../../assets/ai.png";
 const AiwithText = () => {
   // Initialize Google Generative AI with API key
   const genAI = new GoogleGenerativeAI(
-    "AIzaSyAwjprrVaO4RlkRQWm_7OwUMX-zMTx8AyI"
+    "AIzaSyDYA5Y4ReMt_6Me8dlu3kUFIqsWw1S_lAY"
     // import.meta.env.VITE_AI_KEY // Uncomment for Vite environment key usage
   );
 
@@ -23,7 +23,9 @@ const AiwithText = () => {
     setResponse(""); // Clear previous response
 
     // Get the Generative AI model
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    // const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
 
     // Define the prompt for AI generation
     const prompt = `Provide a detailed recipe for a healthy version of ${search}. Include a list of ingredients needed, step-by-step instructions for preparation, and the calorie count per serving. Ensure that the recipe is designed to be nutritious, using wholesome and minimally processed ingredients.`;
